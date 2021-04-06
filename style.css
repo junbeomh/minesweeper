@@ -1,0 +1,130 @@
+
+
+body {
+    background-color: rgb(36, 36, 36);
+    font-family: 'Roboto Slab', serif;
+    padding: 1em;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+td {
+    border: 2px solid black;
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: white;
+}
+
+h2,
+p {
+    color: white;
+}
+
+#controlBoard {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+#leaderBoard h2 {
+    text-align: center;
+}
+
+#userList li {
+    list-style-type: None;
+    text-align: left;
+    margin-bottom: .5em;
+}
+
+#userInfo p {
+    display: inline;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+
+#name {
+    color: tomato;
+}
+
+#leaderBoard {
+    display: none;
+    width: 50%;
+    max-width: 20em;
+    min-width: 15em;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: white;
+    border-radius: 1em;
+}
+
+#leaderBoard h2,
+#userList li {
+    color: black;
+    overflow: hidden;
+}
+
+#reset {
+    padding: 1em;
+    border: none;
+    background-color: tomato;
+    border-radius: 1em;
+    color: white;
+}
+
+#difficultyButtonContainer {
+    margin-top: 1em;
+    text-align: center;
+}
+
+#difficultyButtonContainer p {
+    background-color: wheat;
+    color: rgb(27, 27, 27);
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.difficulty {
+    padding: 1em;
+    border: none;
+    border-radius: .5em;
+    font-weight: bold;
+    margin: 0 .5em;
+}
+
+.difficulty:hover {
+    padding: 1.2em;
+    transition: 0.2s;
+}
+
+#easy {
+    background-color: greenyellow;
+}
+
+#medium {
+    background-color: orange;
+}
+
+#difficult {
+    background-color: tomato;
+}
+
+@media screen and (max-width: 550px) {
+    td {
+        font-size: .8em;
+    }
+
+    #userInfo p {
+        display: block;
+    }
+} 

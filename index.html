@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Minesweeper</title>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBIEAS9neRAqqBRaDWMxOTan8xg39uHdI4",
+            authDomain: "jijuntay-minesweeper.firebaseapp.com",
+            databaseURL: "https://jijuntay-minesweeper.firebaseio.com",
+            projectId: "jijuntay-minesweeper",
+            storageBucket: "jijuntay-minesweeper.appspot.com",
+            messagingSenderId: "241672098695"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <div id="controlBoard">
+        <h2>Minesweeper</h2>
+        <p id="numOfBombs"></p>
+        <p id="numOfFlags"></p>
+        <div id="userInfo">
+            <p id="userScore"><span>Score: </span><span id="score">0</span></p>
+        </div>
+        <p id="timer">0 : 0</p>
+        <div id="leaderBoard">
+            <h2>Top 5 Players</h2>
+            <ul id="userList">
+                <li></li>
+            </ul>
+            <button id="reset" onclick="restart()">Restart</button>
+        </div>
+    </div>
+    <table id="board"></table>
+    <div id="difficultyButtonContainer">
+        <button id="easy" class="difficulty" onclick="setDifficulty(1)">Easy</button>
+        <button id="medium" class="difficulty" onclick="setDifficulty(2)">Medium</button>
+        <button id="difficult" class="difficulty" onclick="setDifficulty(3)">Difficult</button>
+        <br><br>
+
+    </div>
+    <script src="./minesweeper.js"></script>
+</body>
+
+</html>
